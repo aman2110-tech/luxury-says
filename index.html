@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+ <section class="header" id="header">
+
+
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container-fluid">
+    <h1 class="text-white">Aurique.store</h1>
+   
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+      <form class="d-flex ms-auto me-3">
+        <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark search-btn" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#header">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#products-section">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#deals">Deals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+     <div class="carousel-inner">
+       <div class="carousel-item active new">
+        <img src="new-2.avif" class="corousal d-block  h-10" alt="...">
+       </div>
+       <div class="carousel-item new">
+        <img src="carousel_2.jpg" class=" corousal d-block  h-10" alt="...">
+       </div>
+       <div class="carousel-item new" >
+        <img src="Elegance in Amber and Pearls.png" class=" corousal d-block h-10" alt="...">
+       </div>
+       </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+       </button>
+       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+       </button>
+     </div>
+    </div>
+   <h2>Luxury That Defines You</h2>
+   <p>Discover top products at unbeatable prices.</p>
+   <button class="shop">Shop Now</button>
+ </section>
+
+ <section class="products-section" id="products-section">
+    <h3>Featured Products</h3>
+    <div class="products-grid">
+
+      <div class="product-card " id="product1">
+        <div class="product-image">,<img src="silver-watchh.avif" class="product-img"></div>
+        <h3 class="product-title">Silver Watch</h3>
+        <p class="product-price">$299</p>
+        <button class="btn" onclick="addToCart(1, 'Silver Watch', 299)">Add to Cart</button>
+      </div>
+
+      <div class="product-card " >
+        <div class="product-image"><img src="leather-bag.avif"  class="product-img"></div>
+      
+        <h3 class="product-title">Leather Bag</h3>
+        <p class="product-price">$799</p>
+        <button class="btn" onclick="addToCart(2, 'Leather Bag', 799)">Add to Cart</button>
+      </div>
+
+      <div class="product-card ">
+        <div class="product-image"><img src="gold-neckles.webp"  class="product-img"></div>
+        <h3 class="product-title">Gold Necklace</h3>
+        <p class="product-price">$499</p>
+        <button class="btn" onclick="addToCart(3, 'Gold Necklace', 499)">Add to Cart</button>
+      </div>
+
+      <div class="product-card ">
+        <div class="product-image"><img src="sunglasses.avif"  class="product-img"></div>
+        <h3 class="product-title">Classic Sunglasses</h3>
+        <p class="product-price">$199</p>
+         <button class="btn" onclick="addToCart(4, 'Classic Sunglasses', 199)">Add to Cart</button>
+      </div>
+
+      <div class="product-card ">
+        <div class="product-image"><img src="designer-wallet.avif"  class="product-img"></div>
+        <h3 class="product-title">Designer Wallet</h3>
+        <p class="product-price">$249</p>
+        <button class="btn" onclick="addToCart(5, 'Designer Wallet', 249)">Add to Cart</button>
+      </div>
+
+      <div class="product-card ">
+        <div class="product-image"><img src="white-sneakers.avif " class="product-img"></div>
+        <h3 class="product-title">White Sneakers</h3>
+        <p class="product-price">$349</p>
+        <button class="btn" onclick="addToCart(6, 'White Sneakers', 349)">Add to Cart</button>
+      </div>
+      <div class="product-card ">
+        <div class="product-image"><img src="Diamond Elegance on Satin Blue.png" class="product-img"></div>
+        <h3 class="product-title">Tiffany & Co. Diamond Necklace</h3>
+        <p class="product-price">  $120,000</p>
+        <button class="btn" onclick="addToCart(7, 'Tiffany & Co. Diamond Necklace', 120000)">Add to Cart</button>
+      </div>
+      <div class="product-card ">
+        <div class="product-image"><img src="ring.avif" class="product-img"></div>
+        <h3 class="product-title">Platinum Wedding Ring (Cartier)</h3>
+        <p class="product-price"> $75,000</p>
+        <button class="btn" onclick="addToCart(8, 'Platinum Wedding Ring (Cartier)', 75000)">Add to Cart</button>
+      </div>
+      <div class="product-card ">
+        <div class="product-image"><img src="pink-diamond.avif" class="product-img"></div>
+        <h3 class="product-title">Rare Pink Diamond (2 carats) </h3>
+        <p class="product-price"> $1,200,000</p>
+        <button class="btn" onclick="addToCart(9, 'Rare Pink Diamond (2 carats) ', 1200000)">Add to Cart</button>
+      </div>
+      <div class="product-card ">
+        <div class="product-image"><img src="gold-coin.avif" class="product-img"></div>
+        <h3 class="product-title">Antique Gold Coin Collection</h3>
+        <p class="product-price"> $250,000</p>
+        <button class="btn" onclick="addToCart(10, 'Antique Gold Coin Collection', 250000)">Add to Cart</button>
+      </div>
+      <div class="product-card ">
+        <div class="product-image"><img src="heels.avif" class="product-img"></div>
+        <h3 class="product-title">Christian Louboutin Heels</h3>
+        <p class="product-price">$995</p>
+        <button class="btn" onclick="addToCart(11, 'Christian Louboutin Heels', 995)">Add to Cart</button>
+      </div>
+      <div class="product-card ">
+        <div class="product-image"><img src="sofa.avif" class="product-img"></div>
+        <h3 class="product-title">Fendi Leather Sofa</h3>
+        <p class="product-price"> $15,000</p>
+        <button class="btn" onclick="addToCart(12, 'Fendi Leather Sofa', 15000)">Add to Cart</button>
+      </div>
+      <div class="product-card ">
+        <div class="product-image"><img src="perfume.avif" class="product-img"></div>
+        <h3 class="product-title">Van Cleef & Arpels Perfume</h3>
+        <p class="product-price"> $650</p>
+        <button class="btn" onclick="addToCart(13, 'Van Cleef & Arpels Perfume', 650)">Add to Cart</button>
+      </div>
+      <div class="product-card ">
+        <div class="product-image"><img src="dinner-set.avif" class="product-img"></div>
+        <h3 class="product-title">Gold-Plated Dinnerware Set</h3>
+        <p class="product-price">  $3,400</p>
+        <button class="btn" onclick="addToCart(14, 'Gold-Plated Dinnerware Set', 3400)">Add to Cart</button>
+      </div>
+       
+      <div class="product-card ">
+        <div class="product-image"><img src="luxury7.avif" class="product-img"></div>
+        <h3 class="product-title"> Hermès Birkin Bag</h3>
+        <p class="product-price"> $18,500</p>
+        <button class="btn" onclick="addToCart(15, 'Hermès Birkin Bag', 18500)">Add to Cart</button> 
+      </div>
+
+    </div>
+
+    <div class="modal-container">
+       <div class="modal"> 
+   <div class="modal-content">
+      <span class="close">×</span>
+      <img>
+      <h3> 
+      <p> 
+   </div>
+</div>
+
+
+    </div>
+ </section>
+    
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
